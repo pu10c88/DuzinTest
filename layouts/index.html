@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="R$ 421.700 em projetos vendidos e uma renda fixa mensal acima dos R$ 22.000. Aprenda automações que resolvem problemas reais de empresas.">
+    
+    <!-- CUSTOM HEAD SCRIPTS - INSERT GOOGLE TAG MANAGER, FACEBOOK PIXEL, ETC. HERE -->
+    <!-- Example: Google Tag Manager -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+    
+    <!-- Example: Facebook Pixel -->
+    <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','XXXXXXXXXXXXXXXXX');fbq('track','PageView');</script> -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section - First Fold */
+        .hero-section {
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content-center {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            margin-bottom: 0px;
+        }
+
+        .logo-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            max-height: 1000px;
+            min-height: 500px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero-subtext {
+            font-size: 1.3rem;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .hero-subtext strong {
+            color: #f1c40f;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #f1c40f, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: #f1c40f;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .highlight-text {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        /* Contact Form - First Fold */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-input.error {
+            border: 2px solid #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+        }
+
+        .form-input.success {
+            border: 2px solid #2ecc71;
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .form-input:focus {
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #f1c40f, #f39c12);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(241, 196, 15, 0.4);
+        }
+
+        /* Results Section */
+        .results-section {
+            background: linear-gradient(135deg, #f1c40f, #f39c12);
+            color: #000;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .results-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .results-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .results-highlight {
+            color: #000;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background: #111;
+            text-align: center;
+        }
+
+        .video-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #f1c40f;
+            line-height: 1.3;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        /* Testimonials Carousel Section */
+        .testimonials-section {
+            padding: 80px 0;
+            background: #111;
+            overflow: hidden;
+        }
+
+        .testimonials-title {
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 60px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .testimonials-carousel {
+            width: 100%;
+            overflow: hidden;
+            mask: linear-gradient(
+                to right,
+                transparent,
+                white 10%,
+                white 90%,
+                transparent
+            );
+            -webkit-mask: linear-gradient(
+                to right,
+                transparent,
+                white 10%,
+                white 90%,
+                transparent
+            );
+        }
+
+        .testimonials-track {
+            display: flex;
+            animation: scroll 80s linear infinite;
+            width: fit-content;
+        }
+
+        .photo-card {
+            background: #222;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 0 15px;
+            min-width: 400px;
+            max-width: 400px;
+            height: 300px;
+            border: 1px solid #333;
+            flex-shrink: 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .photo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover .photo-image {
+            transform: scale(1.05);
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Pause animation on hover */
+        .testimonials-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Course Content Section */
+        .course-content-section {
+            padding: 80px 0;
+            background: #1a1a1a;
+        }
+
+        .course-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #f1c40f;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .course-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .course-modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .module-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2);
+        }
+
+        .module-title {
+            font-size: 1.8rem;
+            color: #f1c40f;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .module-subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .module-description {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .competitive-advantage {
+            text-align: center;
+            background: rgba(241, 196, 15, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            border: 2px solid #f1c40f;
+        }
+
+        .competitive-title {
+            font-size: 1.8rem;
+            color: #f1c40f;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .competitive-subtitle {
+            font-size: 1.3rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Success Stories Section */
+        .success-section {
+            padding: 80px 0;
+            background: #000;
+        }
+
+        .success-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .success-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #f1c40f;
+            text-transform: uppercase;
+        }
+
+        .success-stats {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #ccc;
+        }
+
+        .success-stats strong {
+            color: #f1c40f;
+            font-size: 1.3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2);
+        }
+
+        .testimonial-image {
+            width: 100%;
+            max-width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .guarantee-section {
+            margin-bottom: 50px;
+        }
+
+        .guarantee-title {
+            font-size: 2rem;
+            color: #f1c40f;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .guarantee-text {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 50px;
+            border: 2px solid #f1c40f;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        .price-old {
+            font-size: 1.2rem;
+            color: #ccc;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .price-label {
+            font-size: 1.5rem;
+            color: #f1c40f;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .price-installment {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .price-cash {
+            font-size: 1.2rem;
+            color: #f1c40f;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .course-contents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .content-column {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-title {
+            font-size: 1.5rem;
+            color: #f1c40f;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: #000;
+        }
+
+        .contact-section .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cta-button-large {
+            display: inline-block;
+            padding: 25px 50px;
+            background: linear-gradient(45deg, #f1c40f, #f39c12);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(241, 196, 15, 0.4);
+        }
+
+        /* Popup Modal */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            border: 2px solid #f1c40f;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .popup-close:hover {
+            color: #f1c40f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero-subtext {
+                font-size: 1.1rem;
+            }
+
+            .logo-image {
+                max-height: 800px;
+                min-height: 400px;
+                max-width: 100%;
+            }
+
+            .results-title {
+                font-size: 2rem;
+            }
+
+            .course-title {
+                font-size: 2rem;
+            }
+
+            .course-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .course-modules {
+                grid-template-columns: 1fr;
+            }
+
+            .course-contents {
+                grid-template-columns: 1fr;
+            }
+
+            .video-title {
+                font-size: 1.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-installment {
+                font-size: 2.5rem;
+            }
+
+            .guarantee-title {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .logo-image {
+                max-height: 600px;
+                min-height: 300px;
+                max-width: 100%;
+            }
+
+            .cta-button-large {
+                padding: 20px 30px;
+                font-size: 1.1rem;
+            }
+
+            .popup-content {
+                padding: 30px 20px;
+            }
+
+            .results-title {
+                font-size: 1.8rem;
+            }
+
+            .video-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+        .mt-30 {
+            margin-top: 30px;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- CUSTOM BODY SCRIPTS - INSERT GOOGLE TAG MANAGER (NOSCRIPT), ETC. HERE -->
+    <!-- Example: Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
+    <!-- Hero Section (Sem formulário na capa) -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content-center">
+                <div class="hero-logo">
+                    <img src="/image.png" alt="Mestre + Formação Gestor" class="logo-image">
+                </div>
+                <h2 class="hero-subtitle">R$ 421.700 EM PROJETOS VENDIDOS</h2>
+                <h3 class="hero-subtitle">E UMA RENDA FIXA MENSAL ACIMA DOS R$ 22.000</h3>
+                <p class="hero-description">é o resultado em só 4 anos com automações</p>
+                <div class="mt-40">
+                    <p class="hero-subtext">Aprenda automações que resolvem <strong>problemas reais</strong> de empresas<br>
+                    e que rendem <strong>contratos mensais de R$ 3 a 9 mil</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="results-title">NÃO EXISTE MÁGICA, NEM MILAGRE</h2>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="video-title">Assista o vídeo abaixo e veja como é ser um Gestor de Automações</h2>
+            <div class="video-container">
+                <!-- Local Video Player -->
+                <video controls poster="/images/video-thumbnail.jpg" preload="metadata">
+                    <source src="/cyberloop.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="mt-40">
+                <button class="cta-button-large" onclick="openPopup()">QUERO SER UM GESTOR DE AUTOMAÇÃO</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="testimonials-title">SÃO MAIS DE 5.500 ALUNOS E CENTENAS DE VIDAS TRANSFORMADAS COM O QUE EU ENSINO!</h2>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Foto 1 -->
+                    <div class="photo-card">
+                        <img src="/carousel/59297343-1C30-4AEA-AD3A-E91CE6627594_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <!-- Foto 2 -->
+                    <div class="photo-card">
+                        <img src="/carousel/AAF77B65-9BFE-4518-A9FC-24E6CF97C6EC_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <!-- Foto 3 -->
+                    <div class="photo-card">
+                        <img src="/carousel/D5684EE5-F373-4DEB-9920-58D84E270C48_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <!-- Foto 4 -->
+                    <div class="photo-card">
+                        <img src="/carousel/C99B405D-B895-443A-AC55-640044749358_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <!-- Foto 5 -->
+                    <div class="photo-card">
+                        <img src="/carousel/CE07AECC-340B-4114-95AF-FFB74FFD8D82_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <!-- Foto 6 -->
+                    <div class="photo-card">
+                        <img src="/carousel/ACD5BF84-C850-4DA6-9321-BBC7D706D792_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+
+                    
+                    <!-- Duplicados para loop infinito -->
+                    <div class="photo-card">
+                        <img src="/carousel/59297343-1C30-4AEA-AD3A-E91CE6627594_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="/carousel/AAF77B65-9BFE-4518-A9FC-24E6CF97C6EC_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="/carousel/D5684EE5-F373-4DEB-9920-58D84E270C48_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="/carousel/C99B405D-B895-443A-AC55-640044749358_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="/carousel/CE07AECC-340B-4114-95AF-FFB74FFD8D82_1_105_c.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="/carousel/ACD5BF84-C850-4DA6-9321-BBC7D706D792_1_201_a.jpeg" alt="Resultado de aluno" class="photo-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content Section -->
+    <section class="course-content-section">
+        <div class="container">
+            <h2 class="course-title">O QUE TEM NA FORMAÇÃO GESTOR?</h2>
+            <h3 class="course-subtitle">TEM TUDO QUE VOCÊ PRECISA PRA SAIR DO ZERO AOS R$ 20.000 POR MÊS!</h3>
+            
+            <div class="course-modules">
+                <div class="module-card">
+                    <h4 class="module-title">FUNDAMENTOS</h4>
+                    <h5 class="module-subtitle">O "ABC" DO MERCADO DE AUTOMAÇÕES</h5>
+                    <p class="module-description">
+                        Você vai aprender como transformar seu conhecimento em um negócio!<br><br>
+                        Entender o mercado, como se posicionar, planejamento de projetos, filtrar bons clientes, 
+                        precificar serviços são habilidades necessárias pra vencer nesse mercado!
+                    </p>
+                </div>
+                
+                <div class="module-card">
+                    <h4 class="module-title">MÃO NA MASSA</h4>
+                    <h5 class="module-subtitle">DOMÍNIO TOTAL DAS FERRAMENTAS</h5>
+                    <p class="module-description">
+                        Cada uma das ferramentas precisa ser explorada a fundo. Por isso vamos explorar juntos todas elas!<br><br>
+                        Das mais básicas até as mais avançadas: eu vou te transformar em um profissional SEM LIMITES!
+                    </p>
+                </div>
+                
+                <div class="module-card">
+                    <h4 class="module-title">PROJETOS VALIDADOS</h4>
+                    <h5 class="module-subtitle">CATÁLOGO DE AUTOMAÇÕES 100% VALIDADAS</h5>
+                    <p class="module-description">
+                        Automações testadas e validadas prontas pra serem replicadas e vendidas!<br><br>
+                        Chatbots com e sem IA, Disparos em Massa, Dashboards Inteligentes, Automações pra infoprodutos e lançamentos e muito mais<br><br>
+                        Duvido você não encontrar clientes com tanto serviço!
+                    </p>
+                </div>
+                
+                <div class="module-card">
+                    <h4 class="module-title">INDO MUITO ALÉM</h4>
+                    <h5 class="module-subtitle">ACELERADORES DE RESULTADO</h5>
+                    <p class="module-description">
+                        Além de todo o conteúdo técnico, você precisa aprender a gerenciar e crescer o seu negócio.<br><br>
+                        Você vai aprender sobre estrutura digital: como criar seu site, tráfego para automações, reuniões automáticas, follow-up de clientes, comissionamento de plataformas e muito mais.<br><br>
+                        Ou seja, multiplicar seus resultados com menos esforço!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="competitive-advantage">
+                <h3 class="competitive-title">O MERCADO JÁ TÁ CHEIO DE PROFISSIONAL QUE SÓ COPIA TEMPLATE</h3>
+                <h4 class="competitive-subtitle">A FORMAÇÃO TE LEVA ONDE A CONCORRÊNCIA NÃO CHEGA!</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-section">
+        <div class="container">
+            <h2 class="success-title">TÁ, MAS...</h2>
+            <h3 class="success-subtitle">SERÁ QUE EU TAMBÉM CONSIGO?</h3>
+            <div class="success-stats">
+                <strong>TENHO O MAIOR ÍNDICE DE ALUNOS BEM SUCEDIDOS!</strong><br>
+                SÃO MAIS DE 5.500 ALUNOS E CENTENAS DE VIDAS TRANSFORMADAS COM O QUE EU ENSINO!
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="guarantee-section">
+                <h3 class="guarantee-title">GARANTIA INCONDICIONAL DE 7 DIAS</h3>
+                <p class="guarantee-text">SEM ESQUEMINHA: NÃO TENHO CONTEÚDO LIBERADO SOMENTE APÓS A GARANTIA!</p>
+                <p class="guarantee-text">ACESSE TUDO E AVALIE SE É O IDEAL PRA VOCÊ</p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="price-old">De R$997,00</div>
+                <div class="price-label">POR SOMENTE</div>
+                <div class="price-installment">12x R$59,50</div>
+                <div class="price-cash">ou R$597 à vista no mês de Junho!</div>
+                
+                <button class="cta-button-large pricing-cta" onclick="openPopup()">QUERO SER UM GESTOR DE AUTOMAÇÃO</button>
+            </div>
+            
+            <div class="course-contents">
+                <div class="content-column">
+                    <h4 class="content-title">CONTEÚDO DO<br>MESTRE DOS BOTS</h4>
+                    <ul class="content-list">
+                        <li>‣ Planejamento de projetos para executar</li>
+                        <li>‣ Principais ferramentas para projetos de R$3.000+</li>
+                        <li>‣ Chatbot 2.0</li>
+                        <li>‣ Chatbot 3.0</li>
+                        <li>‣ Chatbot Instagram</li>
+                        <li>‣ Chatbot com I.A.</li>
+                        <li>‣ Chatbot com I.A. e GPT Vision</li>
+                        <li>‣ Chatbot com I.A. e Áudio</li>
+                        <li>‣ SuperAgente GPT-4</li>
+                        <li>‣ Disparo em Massa com API Oficial</li>
+                        <li>‣ Disparo em Massa com API não Oficial</li>
+                        <li>‣ Automações de Checkout pra lançamentos</li>
+                        <li>‣ Dashboards Inteligentes</li>
+                        <li>‣ Masterclass: Crie Seu Site</li>
+                        <li>‣ Masterclass: Landing Pages que Convertem</li>
+                        <li>‣ Masterclass: Reuniões Automáticas</li>
+                        <li>‣ Masterclass: Follow Up Infinito</li>
+                        <li>‣ Masterclass: Venda com YouTube</li>
+                        <li>‣ Masterclass: Venda com Instagram</li>
+                    </ul>
+                </div>
+                
+                <div class="content-column">
+                    <h4 class="content-title">CONTEÚDO DO<br>FORMAÇÃO GESTOR</h4>
+                    <ul class="content-list">
+                        <li>‣ Dominando as API's</li>
+                        <li>‣ Dominando o Postman</li>
+                        <li>‣ WebHooks - API's reversas</li>
+                        <li>‣ Regular Expression - regEx</li>
+                        <li>‣ Make Academy</li>
+                        <li>‣ GPT Academy e FunctionCalling</li>
+                        <li>‣ ManyChat Academy</li>
+                        <li>‣ FiqOn - Make brasileiro, em breve</li>
+                        <li>‣ n8n - em breve</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-form">
+                <h3 class="form-title">Garanta sua vaga agora!</h3>
+                <form id="heroForm" onsubmit="submitForm(event, 'heroForm')">
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" placeholder="Seu melhor e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" name="phone" placeholder="Seu WhatsApp (11) 99999-9999" required>
+                    </div>
+                    <button type="submit" class="cta-button">
+                        QUERO SER UM GESTOR DE AUTOMAÇÃO
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popupOverlay" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()" aria-label="Fechar">&times;</button>
+            <h3 class="form-title">Garanta sua vaga agora!</h3>
+            <form id="popupForm" onsubmit="submitForm(event, 'popupForm')">
+                <div class="form-group">
+                    <input type="text" class="form-input" name="name" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" name="email" placeholder="Seu melhor e-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" name="phone" placeholder="Seu WhatsApp (11) 99999-9999" required>
+                </div>
+                <button type="submit" class="cta-button">
+                    QUERO APRENDER AUTOMAÇÕES
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Popup Functions
+        function openPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+            
+            // CUSTOM TRACKING - INSERT YOUR ANALYTICS EVENTS HERE
+            // Example: gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': 'popup_open' });
+            // Example: fbq('track', 'Lead');
+            
+            console.log('Popup opened - Add your tracking code here');
+        }
+
+        function closePopup(event) {
+            if (event && event.target !== document.getElementById('popupOverlay')) {
+                return;
+            }
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+
+        // Form Submission Handler
+        function submitForm(event, formId) {
+            event.preventDefault();
+            
+            const form = document.getElementById(formId);
+            const formData = new FormData(form);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const phone = formData.get('phone').trim();
+            
+            // Validação dos campos
+            if (!validateForm(name, email, phone, formId)) {
+                return;
+            }
+            
+            // Desabilitar botão durante envio
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'ENVIANDO...';
+            submitBtn.disabled = true;
+            
+            // Dados do lead
+            const leadData = {
+                name: name,
+                email: email,
+                phone: phone,
+                source: formId,
+                timestamp: new Date().toISOString(),
+                page_url: window.location.href
+            };
+            
+            // ENVIO PARA O SERVIDOR - SUBSTITUA COM SEU ENDPOINT
+            fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(leadData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Lead enviado com sucesso:', data);
+                
+                // CUSTOM CONVERSION TRACKING
+                // Example: gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL', 'value': 1.0, 'currency': 'BRL' });
+                // Example: fbq('track', 'CompleteRegistration', { value: 1.0, currency: 'BRL' });
+                
+                // Redirecionar para página de agradecimento
+                window.location.href = '/thanks.html';
+            })
+            .catch(error => {
+                console.error('Erro ao enviar lead:', error);
+                
+                // Fallback: enviar por email ou salvar localmente
+                sendLeadByEmail(leadData);
+                
+                // Ainda assim redirecionar para página de agradecimento
+                window.location.href = '/thanks.html';
+            })
+            .finally(() => {
+                // Restaurar botão
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        }
+
+        // Validação de formulário
+        function validateForm(name, email, phone, formId) {
+            let isValid = true;
+            const form = document.getElementById(formId);
+            
+            // Limpar classes de erro
+            form.querySelectorAll('.form-input').forEach(input => {
+                input.classList.remove('error', 'success');
+            });
+            
+            // Validar nome
+            const nameInput = form.querySelector('input[name="name"]');
+            if (name.length < 2) {
+                nameInput.classList.add('error');
+                isValid = false;
+            } else {
+                nameInput.classList.add('success');
+            }
+            
+            // Validar email
+            const emailInput = form.querySelector('input[name="email"]');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailInput.classList.add('error');
+                isValid = false;
+            } else {
+                emailInput.classList.add('success');
+            }
+            
+            // Validar telefone
+            const phoneInput = form.querySelector('input[name="phone"]');
+            const phoneRegex = /^[\(\)\s\-\+\d]{10,}$/;
+            if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+                phoneInput.classList.add('error');
+                isValid = false;
+            } else {
+                phoneInput.classList.add('success');
+            }
+            
+            return isValid;
+        }
+
+        // Fallback: enviar lead por email usando mailto (temporário)
+        function sendLeadByEmail(leadData) {
+            const subject = 'Novo Lead - Mestre dos Bots';
+            const body = `
+Novo lead capturado:
+
+Nome: ${leadData.name}
+Email: ${leadData.email}
+Telefone: ${leadData.phone}
+Origem: ${leadData.source}
+Data: ${leadData.timestamp}
+Página: ${leadData.page_url}
+            `;
+            
+            // Salvar no localStorage como backup
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            leads.push(leadData);
+            localStorage.setItem('leads', JSON.stringify(leads));
+            
+            console.log('Lead salvo localmente:', leadData);
+        }
+
+        // Carregar leads salvos (para teste)
+        function getStoredLeads() {
+            return JSON.parse(localStorage.getItem('leads') || '[]');
+        }
+
+        // TESTIMONIALS FUNCTIONALITY
+        // O carousel de testimoniais rola automaticamente via CSS
+        // Não precisa de JavaScript adicional
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form validation enhancements
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '#2ecc71';
+                }
+            });
+        });
+
+        // Page load analytics
+        document.addEventListener('DOMContentLoaded', function() {
+            // CUSTOM PAGE LOAD TRACKING - INSERT YOUR ANALYTICS CODE HERE
+            // Example: gtag('event', 'page_view', { 'page_title': 'Landing Page', 'page_location': window.location.href });
+            
+            console.log('Page loaded - Add your tracking code here');
+            
+            // Adicionar máscara de telefone
+            addPhoneMask();
+            
+            // Mostrar leads salvos no console (para teste)
+            console.log('Leads salvos:', getStoredLeads());
+        });
+
+        // Adicionar máscara de telefone brasileiro
+        function addPhoneMask() {
+            document.querySelectorAll('input[name="phone"]').forEach(input => {
+                input.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length <= 11) {
+                        if (value.length <= 10) {
+                            value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+                        } else {
+                            value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                        }
+                    }
+                    
+                    e.target.value = value;
+                });
+            });
+        }
+
+        // Função para testar leads (adicionar no console do navegador)
+        function downloadLeads() {
+            const leads = getStoredLeads();
+            const dataStr = JSON.stringify(leads, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'leads-mestre-dos-bots.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+    </script>
+</body>
+</html> 
