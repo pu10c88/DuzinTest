@@ -1,252 +1,216 @@
-# MESTRE + FORMAÇÃO GESTOR - Landing Page
+# 🚀 Mestre dos Bots - Landing Page
 
-A complete, responsive HTML5 landing page built with Hugo for capturing leads and promoting automation training courses.
+Uma landing page completa e responsiva para captura de leads, construída com Hugo Static Site Generator.
 
-## 🚀 Features
+![GitHub repo size](https://img.shields.io/github/repo-size/pu10c88/DuzinTest)
+![GitHub last commit](https://img.shields.io/github/last-commit/pu10c88/DuzinTest)
+![GitHub](https://img.shields.io/github/license/pu10c88/DuzinTest)
 
-- ✅ **Contact form in the first fold** (above the fold)
-- ✅ **Popup contact form** triggered by CTA buttons
-- ✅ **Thank you page** with bonus content
-- ✅ **Custom head scripts** support (Google Tag Manager, Facebook Pixel)
-- ✅ **YouTube video** embedded
-- ✅ **Responsive design** (mobile-friendly)
-- ✅ **Professional modern design** with animations
-- ✅ **Easy to edit** content and images
-- ✅ **SEO optimized** with meta tags
-- ✅ **Form validation** and user feedback
+## ✨ Funcionalidades
 
-## 📁 File Structure
+### 🎯 **Landing Page Completa**
+- Design moderno e profissional
+- Estrutura otimizada para conversão
+- Copywriting persuasivo
+- Call-to-actions estratégicos
+
+### 📱 **Totalmente Responsiva**
+- Mobile-first design
+- Funciona perfeitamente em todos os dispositivos
+- Testes realizados em desktop, tablet e celular
+
+### 🖼️ **Carousel de Fotos**
+- Exibe resultados reais dos alunos
+- Scroll automático e suave
+- Pause ao passar o mouse
+- Loop infinito
+
+### 📝 **Sistema de Captura de Leads**
+- Formulário com validação em tempo real
+- Máscara automática para telefone brasileiro
+- Sistema PHP para armazenamento
+- Backup em LocalStorage
+- Exportação para CSV
+- Popup modal funcional
+
+### 🎥 **Vídeo Integrado**
+- Player HTML5 local
+- Vídeo responsivo
+- Controles nativos
+
+### 🎨 **Características Visuais**
+- Título com imagem personalizada
+- Gradientes e animações suaves
+- Tipografia profissional
+- Esquema de cores atrativo
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Hugo** - Static Site Generator
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilização avançada com Flexbox/Grid
+- **JavaScript** - Interatividade e validações
+- **PHP** - Backend para captura de leads
+
+## 📦 Estrutura do Projeto
 
 ```
 metrodosbotsreplica/
 ├── layouts/
-│   └── index.html          # Main landing page template
+│   └── index.html          # Template principal
 ├── static/
-│   └── thanks.html         # Thank you page (static)
-├── hugo.toml              # Hugo configuration
-└── README.md              # This file
+│   ├── api/
+│   │   ├── leads.php       # Endpoint para leads
+│   │   └── README.md       # Documentação da API
+│   ├── carousel/           # Fotos do carousel
+│   ├── cyberloop.mp4      # Vídeo local
+│   └── thanks.html        # Página de agradecimento
+├── public/                 # Arquivos gerados pelo Hugo
+├── hugo.toml              # Configuração do Hugo
+└── README.md              # Este arquivo
 ```
 
-## 🛠️ Setup & Usage
+## 🚀 Como Usar
 
-### 1. Start Hugo Server
+### Pré-requisitos
+- [Hugo](https://gohugo.io/installation/) instalado
+- Servidor web com PHP (para produção)
+
+### Desenvolvimento Local
+
+1. **Clone o repositório:**
 ```bash
-hugo server --bind 0.0.0.0 --port 1313
+git clone https://github.com/pu10c88/DuzinTest.git
+cd DuzinTest
 ```
 
-### 2. Access Your Site
-- **Main Page**: http://localhost:1313
-- **Thank You Page**: http://localhost:1313/thanks.html
+2. **Inicie o servidor Hugo:**
+```bash
+hugo server -D
+```
 
-### 3. Deploy to Production
+3. **Acesse no navegador:**
+```
+http://localhost:1313
+```
+
+### Deploy para Produção
+
+1. **Gere os arquivos estáticos:**
 ```bash
 hugo --minify
 ```
 
-## 🎨 Customization Guide
+2. **Faça upload da pasta `public/` para seu servidor**
 
-### 📝 Edit Content
+3. **Configure o PHP no servidor para o sistema de leads**
 
-#### Main Headline & Subheadings
-Edit in `layouts/index.html`:
-```html
-<h1 class="hero-title">Mestre + Formação Gestor</h1>
-<h2 class="hero-subtitle">R$ 421.700 EM PROJETOS VENDIDOS</h2>
+## 📊 Sistema de Leads
+
+### Recursos do Sistema
+- ✅ Captura nome, email e telefone
+- ✅ Validação completa dos campos
+- ✅ Armazenamento em JSON
+- ✅ Backup automático no navegador
+- ✅ Exportação CSV
+- ✅ Notificações por email (configurável)
+
+### Configuração
+Edite o arquivo `static/api/leads.php`:
+
+```php
+// Configure seu email
+$to = 'seu-email@exemplo.com';
+
+// Configure seu domínio
+$headers .= "From: noreply@seudominio.com" . "\r\n";
 ```
 
-#### Results Section
-```html
-<h2 class="results-title">Não existe mágica, nem milagre</h2>
-<p class="results-description">
-    Aprenda automações que resolvem <span class="results-highlight">problemas reais</span> de empresas
-</p>
-```
+### Acessar Leads Capturados
 
-### 🎥 YouTube Video
+1. **Via arquivo JSON:** `/api/leads.json`
+2. **Via exportação CSV:** `/api/leads.php?export=csv`
+3. **Via console do navegador:** `downloadLeads()`
 
-Replace `YOUR_VIDEO_ID_HERE` with your actual YouTube video ID:
-```html
-<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE">
-```
+## 🎨 Customização
 
-### 🖼️ Images & Testimonials
+### Alterar Cores
+Edite as variáveis CSS no arquivo `layouts/index.html`:
 
-Replace placeholder images in the testimonials section:
-```html
-<img src="https://via.placeholder.com/200x250/333/fff?text=Depoimento+1" alt="Depoimento de aluno sucesso">
-```
-
-Replace with your actual testimonial images:
-```html
-<img src="/images/testimonial-1.jpg" alt="João Silva - Aluno de sucesso">
-```
-
-### 📧 Form Handling
-
-#### Option 1: Backend API
-Edit the `submitForm` function in `layouts/index.html`:
-```javascript
-fetch('/api/submit-lead', {
-    method: 'POST',
-    body: formData
-})
-```
-
-#### Option 2: Third-party Services
-- **Formspree**: `action="https://formspree.io/f/YOUR_FORM_ID"`
-- **Netlify Forms**: Add `netlify` attribute to form
-- **Zapier**: Use Zapier webhooks
-
-### 📊 Analytics Integration
-
-#### Google Tag Manager
-Replace `GTM-XXXXXXX` with your GTM ID in the head section:
-```html
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-```
-
-#### Facebook Pixel
-Replace `XXXXXXXXXXXXXXXXX` with your Pixel ID:
-```html
-<script>fbq('init','XXXXXXXXXXXXXXXXX');fbq('track','PageView');</script>
-```
-
-### 🎨 Colors & Styling
-
-Main brand colors defined in CSS:
 ```css
 :root {
-    --primary-gold: #f1c40f;
-    --secondary-gold: #f39c12;
-    --dark-bg: #000;
-    --light-bg: #111;
+    --primary-color: #f1c40f;
+    --background-dark: #1a1a1a;
+    --text-light: #fff;
 }
 ```
 
-## 📱 Responsive Breakpoints
+### Substituir Fotos
+Adicione suas fotos na pasta `static/carousel/` e atualize as referências no HTML.
 
-- **Desktop**: 1200px+
-- **Tablet**: 768px - 1199px
-- **Mobile**: 480px - 767px
-- **Small Mobile**: < 480px
+### Modificar Conteúdo
+Todo o conteúdo pode ser editado diretamente no arquivo `layouts/index.html`.
 
-## 🔧 Hugo Configuration
+## 📱 Responsividade
 
-Edit `hugo.toml`:
-```toml
-baseURL = 'https://yourdomain.com/'
-languageCode = 'pt-br'
-title = 'MESTRE + FORMAÇÃO GESTOR - Automações que Geram Resultados'
-```
+A landing page foi testada e otimizada para:
 
-## 📈 Performance Optimization
+- **Desktop:** 1920px+
+- **Laptop:** 1024px - 1919px  
+- **Tablet:** 768px - 1023px
+- **Mobile:** 320px - 767px
 
-### 1. Image Optimization
-- Use WebP format for images
-- Compress images before uploading
-- Use appropriate image sizes
+## 🔧 Funcionalidades Técnicas
 
-### 2. CSS & JS Minification
-Hugo automatically minifies when using `hugo --minify`
+### JavaScript Implementado
+- Validação de formulários em tempo real
+- Máscara de telefone brasileiro
+- Popup modal funcional
+- Carousel automático
+- Sistema de fallback para leads
 
-### 3. CDN Integration
-Consider using a CDN for faster global loading
+### PHP Backend
+- Sanitização de dados
+- Validação server-side
+- CORS configurado
+- Rate limiting preparado
+- Sistema de notificações
 
-## 🚀 Deployment Options
+## 📈 Otimizações
 
-### 1. Netlify
-```bash
-# Build command
-hugo --minify
+- ⚡ **Performance:** Arquivos minificados
+- 🔍 **SEO:** Meta tags otimizadas  
+- 📱 **Mobile:** Touch-friendly design
+- 🎯 **Conversão:** CTAs estratégicos
+- 🚀 **Velocidade:** Static site generation
 
-# Publish directory
-public
-```
+## 📝 Licença
 
-### 2. Vercel
-```bash
-# Build command
-hugo --minify
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-# Output directory
-public
-```
+## 👤 Autor
 
-### 3. GitHub Pages
-```bash
-# Use GitHub Actions with Hugo
-```
+**Paulo Loureiro**
+- GitHub: [@pu10c88](https://github.com/pu10c88)
 
-## 📧 Lead Capture Setup
+## 🤝 Contribuições
 
-### CRM Integration Examples:
+Contribuições são bem-vindas! Sinta-se à vontade para:
 
-#### HubSpot
-```javascript
-// Add to form submission
-fetch('https://api.hubspot.com/contacts/v1/contact/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_API_KEY'
-    },
-    body: JSON.stringify({
-        'properties': [
-            {'property': 'email', 'value': email},
-            {'property': 'firstname', 'value': name}
-        ]
-    })
-});
-```
+1. Fazer fork do projeto
+2. Criar uma branch para sua feature
+3. Fazer commit das mudanças
+4. Fazer push para a branch
+5. Abrir um Pull Request
 
-#### Mailchimp
-```javascript
-// Add to form submission
-fetch('https://YOUR_DOMAIN.us1.list-manage.com/subscribe/post-json?u=YOUR_USER_ID&id=YOUR_LIST_ID', {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        'EMAIL': email,
-        'FNAME': name
-    })
-});
-```
+## 📞 Suporte
 
-## 🎯 Marketing Features
+Se encontrar algum problema ou tiver dúvidas:
 
-### A/B Testing
-- Test different headlines
-- Test different CTA button texts
-- Test different form positions
-
-### Conversion Tracking
-- Google Analytics events
-- Facebook Pixel events
-- Custom conversion goals
-
-### Lead Magnets
-- Free PDF downloads
-- Email course sequences
-- Bonus video content
-
-## 🔐 Security
-
-- Form validation on both client and server
-- CSRF protection for forms
-- Rate limiting for form submissions
-- Input sanitization
-
-## 📞 Support
-
-For technical support or customization requests, contact the development team.
-
-## 📄 License
-
-This landing page template is provided for the MESTRE + FORMAÇÃO GESTOR project.
+1. Abra uma [issue](https://github.com/pu10c88/DuzinTest/issues)
+2. Consulte a [documentação da API](static/api/README.md)
+3. Verifique os logs do navegador (F12)
 
 ---
 
-**Built with ❤️ using Hugo & HTML5** 
+⭐ **Se este projeto foi útil, considere deixar uma estrela!** 
