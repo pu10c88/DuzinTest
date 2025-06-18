@@ -1,0 +1,46 @@
+[build]
+  publish = "public"
+  command = "hugo --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.139.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.production.environment]
+  HUGO_VERSION = "0.139.0"
+  HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.139.0"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.139.0"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+# Redirect para página de agradecimento após envio do formulário
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks.html"
+  status = 200
+
+# Redirect de trailing slash
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 301
+  conditions = {Path = "/*/"} 

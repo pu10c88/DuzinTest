@@ -1,0 +1,25 @@
+{
+  "name": "mestre-dos-bots-landing",
+  "version": "1.0.0",
+  "description": "Landing page para o curso Mestre dos Bots com sistema de captura de leads",
+  "main": "netlify/functions/leads.js",
+  "scripts": {
+    "build": "hugo --minify",
+    "dev": "hugo server -D",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "hugo",
+    "landing-page",
+    "netlify",
+    "automation",
+    "leads"
+  ],
+  "author": "Paulo Loureiro",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+} 

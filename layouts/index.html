@@ -1101,8 +1101,8 @@
                 page_url: window.location.href
             };
             
-            // ENVIO PARA O SERVIDOR - SUBSTITUA COM SEU ENDPOINT
-            fetch('/api/leads', {
+            // ENVIO PARA O SERVIDOR - Função Netlify
+            fetch('/.netlify/functions/leads', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
